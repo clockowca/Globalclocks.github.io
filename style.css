@@ -1,0 +1,234 @@
+/* Fonts imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* CSS reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* CSS variables */
+
+:root {
+    --blue:rgb(0,191,255);
+    --white:rgb(255,255,255);
+    --greywhite:rgb(220,220,220);
+    --green:rgb(127,255,0);
+    --red:rgb(255,0,0);
+    --black:rgb(0,0,0);
+    --grey:rgb(47,54,62);
+    --clockgrey:rgb(119,119,119);
+    --violet:rgb(148,0,211);
+}
+
+/* HTML selectors styling */
+
+body {
+    background-color: var(--grey);
+}
+
+span {
+    color: var(--red);
+}
+
+a {
+    text-decoration: none;
+}
+
+#element {
+    width: fit-content;
+    height: 450px;
+}
+
+.city {
+    width: 100%;
+    height: 50px;
+    font-size: 44px;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Raleway Dots', cursive;
+}
+
+.clock {
+    width: 310px;
+    height: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clockgrey);
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+.clock-inside {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/clock.png);
+    background-size: cover
+}
+
+.clock-inside::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: var(--clockgrey);
+    z-index: 100;
+    border-radius: 50%;
+}
+
+.hour, .min, .sec {
+    position: absolute;
+}
+
+.hour, .hr {
+    width: 160px;
+    height: 160px;
+}
+
+.min, .mn {
+    width: 190px;
+    height: 190px;
+}
+
+.sec, .sc {
+    width: 230px;
+    height: 230px;
+}
+
+.hr, .mn, .sc {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before {
+    content: "";
+    width: 7px;
+    position: absolute;
+    height: 75px;
+    background: var(--clockgrey);
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn::before {
+    content: "";
+    width: 6px;
+    position: absolute;
+    height: 80px;
+    top: 8px;
+    background-color: var(--clockgrey);
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.sc::before {
+    content: "";
+    width: 4px;
+    position: absolute;
+    height: 85px;
+    background: var(--red);
+    z-index: 12;
+    top: 24px;
+    border-radius: 6px;
+}
+
+#czas {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.hrs, .mins, .secs, .double {
+    width: fit-content;
+    height: fit-content;
+    font-size: 40px;
+    display: inline-block;
+    padding: 0 2px;
+    font-family: 'Lora', serif;
+}
+
+.double {
+    color: var(--white);
+}
+
+.hrs {
+    color: var(--white);
+}
+
+.mins {
+    color: var(--white);
+}
+
+.secs {
+    color: var(--red);
+}
+
+.box {
+    width: 200px;
+    height: 50px;
+    font-size: 40px;
+    color: var(--white);
+}
+
+.element-next {
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 43px;
+    color: var(--white);
+    font-family: 'Raleway Dots', cursive;
+    display: flex;
+    font-weight: bold;
+    border: 1px solid var(--grey);
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+#WarsawTime, #BerlinTime, #LondonTime, #SydneyTime, #TokyoTime, #NewYorkTime,
+#BelfastTime, #TehranTime, #DubaiTime, #MontrealTime, #OsloTime, #SofiaTime, 
+#PerthTime, #BaghdadTime, #RigaTime, #TijuanaTime, #DetroitTime, #DakarTime, 
+#NairobiTime, #BogotaTime, #BakuTime, #ParisTime, #ZagrebTime, #NauruTime, 
+#MaltaTime, #SouthPoleTime, #TaipeiTime {
+    font-family: 'Lora', serif;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+}
+
+.half-1 {
+    height: fit-content;
+    padding: 40px 0 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.half-2 {
+    display: flex;
+    height: fit-content;
+    padding: 50px 0 0 0;
+    justify-content: center; 
+    flex-wrap: wrap;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#element-warsaw.is-active {
+    border: 1px solid white;
+}
