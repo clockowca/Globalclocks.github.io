@@ -1,6 +1,6 @@
 /* Fonts imports */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 /* CSS reset */
@@ -52,7 +52,7 @@ a {
     display: flex;
     justify-content: center;
     font-weight: bold;
-    font-family: 'Raleway Dots', cursive;
+    font-family: 'Raleway', sans-serif;
 }
 
 .clock {
