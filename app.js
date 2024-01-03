@@ -16,9 +16,9 @@ setInterval (() => {
 
 function clock() {
     var data = new Date();
-    var hours = data.getHours();
-    var minutes = data.getMinutes();
-    var seconds = data.getSeconds();
+    var hours = ('00' + data.getHours()).slice(-2);
+    var minutes = ('00' + data.getMinutes()).slice(-2);
+    var seconds = ('00' + data.getSeconds()).slice(-2);
     var now = hours + ":" + minutes + ":" + seconds;
     document.querySelector(".hrs").innerHTML = hours;
     document.querySelector(".mins").innerHTML = minutes;
